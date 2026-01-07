@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ErrorPages = () => {
+const Cart = () => {
     return (
         <div>
-            ami ErrorPages
+            ami card
         </div>
     );
 };
 
-export default ErrorPages;
+export default Cart;

@@ -1,8 +1,9 @@
 import React from 'react';
 
 const PhoneDitels = () => {
+   
     return (
-        <div>
+        <div className=''>
             ami PhoneDitels
         </div>
     );

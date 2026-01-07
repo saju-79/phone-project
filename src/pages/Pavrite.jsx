@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Pavrise = () => {
+const Pavrite = () => {
     return (
         <div>
-            ami Pavrise
+            ami pavroite
         </div>
     );
 };
 
-export default Pavrise;
+export default Pavrite;

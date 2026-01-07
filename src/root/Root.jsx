@@ -6,8 +6,13 @@ import { Outlet } from 'react-router';
 const Root = () => {
     return (
         <>
-        <Navber></Navber>
-        <Outlet></Outlet>
+        <div className=" "> <Navber></Navber></div>
+        <div className="  min-h-[calc(100vh-120px)] ">
+            <div className=" w-11/12 mx-auto p-4 md:p-8 lg:p-12">
+            <Outlet> </Outlet>
+
+            </div>
+        </div>
         <Footer></Footer>
         </>
     );
