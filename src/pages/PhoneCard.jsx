@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, {   useState } from 'react';
 import AllCard from './AllCard';
 
 const PhoneCard = ({data}) => {
-         const [allData  , setallData] = useState([]);
+        //  const [allData  , setallData] = useState([]);
          const [showall ,  setShowall] = useState(false);
-         useEffect( ()=>{
+        /*  useEffect( ()=>{
               if(showall){
                 setallData(data)
               } else{
                 setallData(data.slice(0 ,6))
               }
-         } ,[data ,showall])
-    
+         } ,[data , showall]) */
+    const allData = showall ? data : data.slice(0 ,6)
+     
     return (
         <div>
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10  mt-5">

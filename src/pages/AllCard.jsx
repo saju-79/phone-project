@@ -3,7 +3,7 @@ import { Link } from 'react-router';
  
 
 const AllCard = ({phone}) => {
-    const {image ,description , name} = phone || {};
+    const {image ,description , name, id} = phone || {};
     
     return (
         <div className="card bg-base-100  w-full shadow-sm">
@@ -16,7 +16,7 @@ const AllCard = ({phone}) => {
     <h2 className="card-title">{name}</h2>
     <p>{description}</p>
     <div className="card-actions justify-end">
-     <Link to='/phoneDitels'>
+     <Link to={`/phoneDitels/${id}`} >
       <button  class="relative inline-block text-lg group">
     <span class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
         <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>

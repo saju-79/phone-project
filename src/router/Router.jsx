@@ -18,6 +18,13 @@ import Cart from "../pages/Card";
                 {
                     path:'/' ,
                     loader:()=>fetch("data.json"),
+                    hydrateFallbackElement: <>
+                              <span className="loading loading-spinner loading-xs"></span>
+                            <span className="loading loading-spinner loading-sm"></span>
+                            <span className="loading loading-spinner loading-md"></span>
+                            <span className="loading loading-spinner loading-lg"></span>
+                            <span className="loading loading-spinner loading-xl"></span> 
+                    </> ,
                     Component:Home ,
                 },
                 {
@@ -26,10 +33,12 @@ import Cart from "../pages/Card";
                 },
                 {
                   path:'/pavrite',
+                   loader:()=>fetch("data.json"),
                   Component:Pavrite
                 },
                 {
-                 path:'/phoneDitels',
+                 path:'/phoneDitels/:id',
+                  loader:()=>fetch("data.json"),
                  Component:PhoneDitels
                 },
                 {
