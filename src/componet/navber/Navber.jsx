@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
 import { MdBookmarkAdd } from 'react-icons/md';
 import { NavLink } from 'react-router';
  
 
 const Navber = () => {
+      const [b , setB ]= useState(false)
+      
     const links =<>
       <li>  <NavLink to='/'  className={ ({isActive}) =>isActive? " bg-gray-300 text-indigo-700 font-bold text-lg mx-2" :" font-bold text-sm mx-2" }>Home</NavLink></li>
       <li>  <NavLink to='/about'  className={ ({isActive}) =>isActive? "  bg-gray-300 text-indigo-700 font-bold text-lg mx-2" :"font-bold text-sm mx-2" }>About</NavLink></li>
       <li>  <NavLink to='/card'  className={ ({isActive}) =>isActive? " bg-gray-300 text-indigo-700 font-bold text-lg mx-2" :"font-bold text-sm mx-2" }> <FaShoppingCart size={25} /></NavLink></li>
       <li>  <NavLink to='/pavrite'  className={ ({isActive}) =>isActive? "  bg-gray-300 text-indigo-700 font-bold text-lg mx-2" :"font-bold text-sm mx-2" }>  <MdBookmarkAdd size={25} /> </NavLink></li>
+      <li>  <NavLink onClick={()=>setB(!b)} to='/firebase'  className={ ({isActive}) =>isActive? "   bg-gray-300 text-indigo-700 font-bold text-lg mx-2" :"font-bold text-sm mx-2" }>  {b ? <button>SignIn</button> : <button>SignOut</button>}  </NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm min-w-2xl mx-auto">

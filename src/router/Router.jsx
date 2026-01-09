@@ -6,6 +6,8 @@ import About from "../pages/About";
 import Pavrite from "../pages/Pavrite";
 import PhoneDitels from "../pages/PhoneDitels";
 import Cart from "../pages/Card";
+import Firebase from "../firebase/Firebase";
+ 
 
 
 
@@ -44,6 +46,10 @@ import Cart from "../pages/Card";
                 {
                     path:'/card' ,
                     Component:Cart
+                },
+                {
+                  path:"/firebase",
+                  Component:Firebase
                 }
 
             ]
